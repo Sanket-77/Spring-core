@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns="http://www.springframework.org/schema/beans"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+    <bean id="st1" class="com.Dependency_Inj.collection.student">
+        <property name="name" value="sanket"/>
+        <property name="address">
+            <list>
+                <value>shiroli</value>
+                <value>pune</value>
+            </list>
+        </property>
+        <property name="phone">
+            <set>
+                <value>123</value>
+                <value>456</value>
+            </set>
+        </property>
+        <property name="course">
+            <map>
+                <entry key="java" value="2 month"/>
+                <entry key="python" value="1 month"/>
+            </map>
+        </property>
+    </bean>
+
+</beans>
+

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+<!--     ******   Ambiguity problem solving ************* -->
+<!--        <bean name="st" class="com.Dependency_Inj.Constructor_inj.student">-->
+<!--            <constructor-arg value="1" type="int"  index="0"/>-->
+<!--            <constructor-arg value="sanket"  index="1" />-->
+<!--        </bean>-->
+
+
+        <bean name="ce" class="com.Dependency_Inj.Constructor_inj.certificete">
+            <constructor-arg value="1" />
+            <constructor-arg value="java" />
+        </bean>
+
+        <bean  name="st" class="com.Dependency_Inj.Constructor_inj.student">
+            <constructor-arg value="1" type="int"/>
+            <constructor-arg value="Coder"/>
+            <constructor-arg value="Indea"/>
+            <constructor-arg>
+                <list>
+                    <value>java</value>
+                    <value>python</value>
+                </list>
+            </constructor-arg>
+            <constructor-arg ref="ce" />
+        </bean>
+</beans>
+
+
+
